@@ -133,7 +133,7 @@ header h1 {
 
 }
 
-h2 {
+h2, h3 {
 		.mixinCenter();
 		padding-top: .4%;
 		font-size: 2rem;
@@ -150,25 +150,34 @@ h2 {
 
 
 	.middleContent {
+
+		@media screen and(max-width:500px){
+			.mixinColumn;
+		}//end media
+
 		font-size: 1.8rem;
 		display: flex;
 		line-height:2.5rem;
 		
-		margin:1% 3%;
+		
+		margin:1% 3.5%;
 		padding:1% 1%;
 
 	.workAndSkills1 {
 		// justify-content: space-evenly;
 		border: .1rem solid grey;
-		padding:0 1%;
-		margin-right:2%;
+		padding:1% 1%;
+		margin-right:5%;
 
-		.workAndSkills2 {
-			border: .1rem solid grey;
-			padding:0 1%;
-			margin-left: 2%;
+		p {
+			padding-top:2%;
+		}
 
-		} //work skills2
+		
+
+
+	
+	
 
 
 	} //wk skills1
@@ -176,3 +185,62 @@ h2 {
 	
 	} //end middleContent
 
+	.workAndSkills2 {
+		@media screen and(max-width:500px){
+			margin:1% 5% 0 0%;
+		}//end media
+		
+		border:.1rem solid grey;
+		margin-left: 5%;
+		padding:1% 1%;
+		
+
+		p {
+			padding-top: 2%;
+		}
+
+		
+	}
+
+
+	
+		.bottomImg {
+			
+			width:90%;
+			height:20rem;
+			margin:0 5%;
+			
+			@media screen and(max-width:500px){
+				display:none;
+			}
+		}
+
+.bottomContent {
+margin-left: 5%;
+font-size: 1.5rem;
+
+h2 { 
+	padding:2% 0;
+	// display: flex;
+// flex-direction: column;
+justify-content: flex-start;
+
+
+
+}//h2
+}//botcont
+
+
+footer {
+
+	
+
+	font-size: 1.5rem;
+	margin-left:4%;
+	padding-top:3%;
+
+	
+	a {
+		padding:0 1%;
+	}
+}

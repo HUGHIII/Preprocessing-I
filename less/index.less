@@ -53,7 +53,194 @@ table {
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+// variables and mixins
+@backColor:beige;
+@fontFam1: Palatino Linotype;
+@fontSize:1.5rem;
+
+.mixinCenter() {
+	display:flex;
+	justify-content:center;
+
 }
 
+.mixinEvenly(){
+	display: flex;
+	justify-content:space-evenly;
+}
+
+.mixinEnd(){
+	display: flex;
+	justify-content: flex-end;
+}
+
+.mixinColumn(){
+	display:flex;
+	flex-direction: column;
+}
+
+
+html, body {
+	height: 100%;
+	max-width: 100%;
+	background-color:@backColor;
+	font-family: @fontFam1; 
+	font-size:62.5%;
+	
+}
+
+header {
+
+
+	font-size:1.5rem ;
+
+	
+
+	nav {
+		.mixinEnd();
+		margin-right:4%;
+
+	@media screen and(max-width:500px){
+		.mixinCenter();
+		margin:0 auto;
+		
+	} //ends media query
+		a {
+			padding:0 1%
+
+	
+
+
+
+		} //anchor end
+		
+
+	} // nav end
+
+} //this closes header
+
+.introImg {
+	width:90%;
+	height:35rem;
+	margin:1% 5%
+}
+
+header h1 {
+	.mixinCenter();
+	font-size: 3.5rem;
+
+	
+
+}
+
+h2, h3 {
+		.mixinCenter();
+		padding-top: .4%;
+		font-size: 2rem;
+	}
+
+
+	.intro{
+		.mixinCenter();
+		font-size: 1.8rem;
+		margin:1% 5%;
+		line-height: 1.5;
+
+	}	//intro end
+
+
+	.middleContent {
+
+		@media screen and(max-width:500px){
+			.mixinColumn;
+		}//end media
+
+		font-size: 1.8rem;
+		display: flex;
+		line-height:2.5rem;
+		
+		
+		margin:1% 3.5%;
+		padding:1% 1%;
+
+	.workAndSkills1 {
+		// justify-content: space-evenly;
+		border: .1rem solid grey;
+		padding:1% 1%;
+		margin-right:5%;
+
+		p {
+			padding-top:2%;
+		}
+
+		
+
+
+	
+	
+
+
+	} //wk skills1
+
+	
+	} //end middleContent
+
+	.workAndSkills2 {
+		@media screen and(max-width:500px){
+			margin:1% 5% 0 0%;
+		}//end media
+		
+		border:.1rem solid grey;
+		margin-left: 5%;
+		padding:1% 1%;
+		
+
+		p {
+			padding-top: 2%;
+		}
+
+		
+	}
+
+
+	
+		.bottomImg {
+			
+			width:90%;
+			height:20rem;
+			margin:0 5%;
+			
+			@media screen and(max-width:500px){
+				display:none;
+			}
+		}
+
+.bottomContent {
+margin-left: 5%;
+font-size: 1.5rem;
+
+h2 { 
+	padding:2% 0;
+	// display: flex;
+// flex-direction: column;
+justify-content: flex-start;
+
+
+
+}//h2
+}//botcont
+
+
+footer {
+
+	
+
+	font-size: 1.5rem;
+	margin-left:4%;
+	padding-top:3%;
+
+	
+	a {
+		padding:0 1%;
+	}
+}
